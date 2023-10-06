@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/carhire/static/css/main.b5320759.css",
+    "main.js": "/carhire/static/js/main.39f86b89.js",
+    "index.html": "/carhire/index.html",
+    "main.b5320759.css.map": "/carhire/static/css/main.b5320759.css.map",
+    "main.39f86b89.js.map": "/carhire/static/js/main.39f86b89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5320759.css",
+    "static/js/main.39f86b89.js"
+  ]
+}
