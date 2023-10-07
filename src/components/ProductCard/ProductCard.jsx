@@ -1,14 +1,22 @@
 import css from './ProductCard.module.css';
+import { useDispatch } from 'react-redux';
+import { cars, gui } from '../../store';
+import { disablePageScroll } from 'scroll-lock';
+import { parseAddress } from 'utils';
 
-export const ProductCard = ({ cars }) => {
+export const ProductCard = ({ carsList }) => {
+  const dispatch = useDispatch();
+
+  const openDetailModal = car => {
+    dispatch(cars.actions.setSelectedCar(car));
+    dispatch(gui.actions.setModalOpen(true));
+    disablePageScroll(document.body);
+  };
+
   return (
     <>
       <ul className={css.list}>
-        {cars.map(car => {
-          const address = car.address.split(',');
-          const city = address[address.length - 2];
-          const country = address[address.length - 1];
-
+        {carsList.map(car => {
           return (
             <li className={css.card} key={car.id}>
               <img className={css.image} src={car.img} alt={car.make} />
@@ -20,13 +28,13 @@ export const ProductCard = ({ cars }) => {
               </div>
               <div className={css.description}>
                 <p className={css.descriptionFirstLine}>
-                  {city} | {country} | {car.rentalCompany}
+                  {parseAddress(car.address).city} | {parseAddress(car.address).country} | {car.rentalCompany}
                 </p>
                 <p className={css.descriptionSecondLine}>
                   {car.type} | {car.make} | {car.mileage} | {car.accessories[0]}
                 </p>
               </div>
-              <button className={css.button} type='button'>
+              <button className={css.button} type='button' onClick={() => openDetailModal(car)}>
                 Learn more
               </button>
             </li>

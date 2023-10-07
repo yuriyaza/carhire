@@ -1,0 +1,138 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modal {
+  width: 541px;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttonClose {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.buttonClose:hover,
+.buttonClose:focus {
+  background: #e0e0e0;
+}
+
+.carImage {
+  width: 461px;
+  height: 248px;
+  margin-bottom: 14px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.carMake {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.carModel {
+  color: #3470ff;
+}
+
+.carDetails {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.carDetailFirstLine {
+  margin-bottom: 4px;
+}
+
+.carDetailSecondLine {
+  margin-bottom: 14px;
+}
+
+.carDescription {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+.carAccessoriesTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.carAccessories {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.carAccessoriesFirstLine {
+  margin-bottom: 4px;
+}
+
+.carAccessoriesSecondLine {
+  margin-bottom: 24px;
+}
+
+.rentalConditionsTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.rentalConditionsTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.rentalConditionsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.rentalConditions {
+  color: #363535;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.24px;
+
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  background: #f9f9f9;
+}
+
+.buttonRental {
+  width: 168px;
+  height: 44px;
+}

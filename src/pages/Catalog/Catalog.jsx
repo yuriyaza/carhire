@@ -1,12 +1,16 @@
-import { useGetCarsQuery } from '../../services/api';
-import { ProductCard } from 'components/ProductCard';
+import { useGetCarsQuery } from '../../api/api';
+import { ProductCard, Modal } from 'components';
+import { useSelector } from 'react-redux';
 
 export const Catalog = () => {
-  const { data: carsData } = useGetCarsQuery();
+  const { data: carsList } = useGetCarsQuery();
+  const isModalOpen = useSelector(state => state.gui.isModalOpen);
 
   return (
-    <div className='container'>
-      {carsData && <ProductCard cars={carsData} />}
-    </div>
+    <>
+      <div className='container'>{carsList && <ProductCard carsList={carsList} />}</div>
+
+      {isModalOpen && <Modal />}
+    </>
   );
 };
