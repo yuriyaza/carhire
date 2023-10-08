@@ -129,4 +129,19 @@
 .buttonRental {
   width: 168px;
   height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 12px;
+  background: #3470ff;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.buttonRental:hover,
+.buttonRental:focus {
+  background: #0b44cd;
 }

@@ -2,24 +2,38 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearQueueScrollLocks, enablePageScroll } from 'scroll-lock';
 
 import { gui } from '../../store';
-import { parseAddress, parseConditions } from 'utils';
+import { parseAddress, parseConditions, addDigitSeparator } from 'utils';
 
 import css from './LearnMoreModal.module.css';
 import btnClose from '../../images/buttonClose.svg';
 
 export const LearnMoreModal = () => {
   const dispatch = useDispatch();
+  const car = useSelector(state => state.cars.selectedCar);
 
   const closeLearnMoreModal = () => {
     dispatch(gui.actions.setModalOpen(false));
     clearQueueScrollLocks();
     enablePageScroll();
+    window.removeEventListener('keydown', onKeyPress);
   };
 
-  const car = useSelector(state => state.cars.selectedCar);
+  const onBackdropClick = e => {
+    if (e.currentTarget === e.target) {
+      closeLearnMoreModal();
+    }
+  };
+
+  const onKeyPress = e => {
+    if (e.code === 'Escape') {
+      closeLearnMoreModal();
+    }
+  };
+
+  window.addEventListener('keydown', onKeyPress);
 
   return (
-    <div className={css.backdrop}>
+    <div className={css.backdrop} onClick={e => onBackdropClick(e)}>
       <div className={css.modalWindow}>
         <button className={css.buttonClose}>
           <img src={btnClose} alt='Close button' onClick={() => closeLearnMoreModal()} />
@@ -50,13 +64,13 @@ export const LearnMoreModal = () => {
           <li className={css.rentalConditions}>{parseConditions(car.rentalConditions).minimumAge}</li>
           <li className={css.rentalConditions}>{parseConditions(car.rentalConditions).driversLicense}</li>
           <li className={css.rentalConditions}>{parseConditions(car.rentalConditions).paymentRequirements}</li>
-          <li className={css.rentalConditions}>Mileage: {car.mileage}</li>
+          <li className={css.rentalConditions}>Mileage: {addDigitSeparator(car.mileage, ',')}</li>
           <li className={css.rentalConditions}>Price: {car.rentalPrice}</li>
         </ul>
 
-        <button className={css.buttonRental} type='button' onClick={()=>closeLearnMoreModal()}>
+        <a className={css.buttonRental} href='tel:+380730000000'>
           Rental car
-        </button>
+        </a>
       </div>
     </div>
   );

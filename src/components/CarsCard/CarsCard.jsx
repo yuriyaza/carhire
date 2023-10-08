@@ -1,10 +1,10 @@
-import css from './VehicleCard.module.css';
+import css from './CarsCard.module.css';
 import { useDispatch } from 'react-redux';
 import { cars, gui } from '../../store';
 import { disablePageScroll } from 'scroll-lock';
-import { parseAddress } from 'utils';
+import { parseAddress, addDigitSeparator } from 'utils';
 
-export const VehicleCard = ({ car }) => {
+export const CarsCard = ({ car }) => {
   const dispatch = useDispatch();
 
   const openLearnMoreModal = car => {
@@ -27,7 +27,7 @@ export const VehicleCard = ({ car }) => {
           {parseAddress(car.address).city} | {parseAddress(car.address).country} | {car.rentalCompany}
         </li>
         <li className={css.carDetailsSecondLine}>
-          {car.type} | {car.make} | {car.mileage} | {car.accessories[0]}
+          {car.type} | {car.make} | {addDigitSeparator(car.mileage, ',')} | {car.accessories[0]}
         </li>
       </ul>
       <button className={css.buttonLearnMore} type='button' onClick={() => openLearnMoreModal(car)}>

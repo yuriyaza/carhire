@@ -1,14 +1,3 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px 29px;
-  margin-bottom: 100px;
-}
-
-.card {
-  width: 274px;
-}
-
 .buttonWrapper {
   width: 100%;
   text-align: center;

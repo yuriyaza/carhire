@@ -9,22 +9,22 @@ export const api = createApi({
   tagTypes: ['cars'],
 
   endpoints: builder => ({
-    getCars: builder.query({
-      query: ({ queryPage, queryLimit }) => ({
-        method: 'GET',
-        url: `/advert?page=${queryPage}&limit=${queryLimit}`,
-      }),
-      providesTags: ['cars'],
-    }),
-
     getAllCars: builder.query({
       query: () => ({
         method: 'GET',
         url: '/advert',
       }),
-      providesTags: ['carsAll'],
+      providesTags: ['allCars'],
+    }),
+
+    getPaginatedCars: builder.query({
+      query: ({ queryPage, queryLimit }) => ({
+        method: 'GET',
+        url: `/advert?page=${queryPage}&limit=${queryLimit}`,
+      }),
+      providesTags: ['paginatedCars'],
     }),
   }),
 });
 
-export const { useGetCarsQuery, useGetAllCarsQuery } = api;
+export const { useGetAllCarsQuery, useGetPaginatedCarsQuery } = api;

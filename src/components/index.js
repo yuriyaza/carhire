@@ -1,4 +1,5 @@
-import { VehicleCard } from './VehicleCard/VehicleCard';
+import { CarsList } from './CarsList/CarsList';
+import { CarsCard } from './CarsCard/CarsCard';
 import { LearnMoreModal } from './LearnMoreModal/LearnMoreModal';
 
-export { VehicleCard, LearnMoreModal };
+export { CarsList, CarsCard, LearnMoreModal };
