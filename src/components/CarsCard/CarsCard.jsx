@@ -1,11 +1,24 @@
 import css from './CarsCard.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { cars, gui } from '../../store';
 import { disablePageScroll } from 'scroll-lock';
 import { parseAddress, addDigitSeparator } from 'utils';
+import buttonFavoriteFalse from '../../images/buttonFavoriteFalse.svg';
+import buttonFavoriteTrue from '../../images/buttonFavoriteTrue.svg';
 
 export const CarsCard = ({ car }) => {
   const dispatch = useDispatch();
+
+  const favoriteCars = useSelector(state => state.cars.favoriteCars);
+  const isFavorite = favoriteCars.some(favorite => favorite.id === car.id);
+
+  const toggleFavorite = car => {
+    if (isFavorite) {
+      dispatch(cars.actions.removeFromFavorite(car));
+    } else {
+      dispatch(cars.actions.addToFavorite(car));
+    }
+  };
 
   const openLearnMoreModal = car => {
     dispatch(cars.actions.setSelectedCar(car));
@@ -15,13 +28,19 @@ export const CarsCard = ({ car }) => {
 
   return (
     <>
+      <button className={css.buttonFavorite} onClick={() => toggleFavorite(car)}>
+        <img src={isFavorite ? buttonFavoriteTrue : buttonFavoriteFalse} alt='Favorite button' />
+      </button>
+
       <img className={css.carImage} src={car.img} alt={car.make} />
+
       <div className={css.carCaption}>
         <p className={css.carMake}>
           {car.make} <span className={css.carModel}>{car.model}</span>, {car.year}
         </p>
         <p className={css.carPrice}>{car.rentalPrice}</p>
       </div>
+
       <ul className={css.carDetailsList}>
         <li className={css.carDetailsFirstLine}>
           {parseAddress(car.address).city} | {parseAddress(car.address).country} | {car.rentalCompany}
@@ -30,6 +49,7 @@ export const CarsCard = ({ car }) => {
           {car.type} | {car.make} | {addDigitSeparator(car.mileage, ',')} | {car.accessories[0]}
         </li>
       </ul>
+
       <button className={css.buttonLearnMore} type='button' onClick={() => openLearnMoreModal(car)}>
         Learn more
       </button>
