@@ -1,4 +1,4 @@
-const parseAddress = address => {
+export const parseAddress = address => {
   const properties = address.split(',');
   const length = properties.length;
 
@@ -7,5 +7,3 @@ const parseAddress = address => {
 
   return { city, country };
 };
-
-export { parseAddress };

@@ -1,0 +1,30 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 29px;
+  margin-bottom: 100px;
+}
+
+.card {
+  width: 274px;
+}
+
+.buttonWrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonLoadMore {
+  background: none;
+  color: #3470ff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+
+.buttonLoadMore:hover,
+.buttonLoadMore:focus {
+  background: none;
+  color: #0b44cd;
+}

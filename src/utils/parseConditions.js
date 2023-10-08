@@ -1,4 +1,4 @@
-const parseConditions = conditions => {
+export const parseConditions = conditions => {
   const properties = conditions.split('\n');
 
   const minimumAge = properties[0];
@@ -7,5 +7,3 @@ const parseConditions = conditions => {
 
   return { minimumAge, driversLicense, paymentRequirements };
 };
-
-export { parseConditions };

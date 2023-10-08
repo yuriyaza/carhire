@@ -8,7 +8,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint": "eslint src/**/*.{js,jsx}"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",

@@ -1,14 +1,16 @@
-import css from './Modal.module.css';
-import btnClose from '../../images/buttonClose.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { gui } from '../../store';
 import { clearQueueScrollLocks, enablePageScroll } from 'scroll-lock';
+
+import { gui } from '../../store';
 import { parseAddress, parseConditions } from 'utils';
 
-export const Modal = () => {
+import css from './LearnMoreModal.module.css';
+import btnClose from '../../images/buttonClose.svg';
+
+export const LearnMoreModal = () => {
   const dispatch = useDispatch();
 
-  const closeDetailModal = () => {
+  const closeLearnMoreModal = () => {
     dispatch(gui.actions.setModalOpen(false));
     clearQueueScrollLocks();
     enablePageScroll();
@@ -18,16 +20,16 @@ export const Modal = () => {
 
   return (
     <div className={css.backdrop}>
-      <div className={css.modal}>
+      <div className={css.modalWindow}>
         <button className={css.buttonClose}>
-          <img src={btnClose} alt='Close button' onClick={() => closeDetailModal()} />
+          <img src={btnClose} alt='Close button' onClick={() => closeLearnMoreModal()} />
         </button>
 
         <img className={css.carImage} src={car.img} alt={car.make} />
         <p className={css.carMake}>
           {car.make} <span className={css.carModel}>{car.model}</span>, {car.year}
         </p>
-        <ul className={css.carDetails}>
+        <ul className={css.carDetailsList}>
           <li className={css.carDetailFirstLine}>
             {parseAddress(car.address).city} |{parseAddress(car.address).country} | Id: {car.id} | Year: {car.year}| Type: {car.type}
           </li>
@@ -38,7 +40,7 @@ export const Modal = () => {
 
         <p className={css.carDescription}>{car.description}</p>
         <p className={css.carAccessoriesTitle}>Accessories and functionalities:</p>
-        <ul className={css.carAccessories}>
+        <ul className={css.carAccessoriesList}>
           <li className={css.carAccessoriesFirstLine}>{car.accessories.join(' | ')}</li>
           <li className={css.carAccessoriesSecondLine}>{car.functionalities.join(' | ')}</li>
         </ul>
@@ -52,7 +54,7 @@ export const Modal = () => {
           <li className={css.rentalConditions}>Price: {car.rentalPrice}</li>
         </ul>
 
-        <button className={css.buttonRental} type='button'>
+        <button className={css.buttonRental} type='button' onClick={()=>closeLearnMoreModal()}>
           Rental car
         </button>
       </div>

@@ -10,13 +10,21 @@ export const api = createApi({
 
   endpoints: builder => ({
     getCars: builder.query({
+      query: ({ queryPage, queryLimit }) => ({
+        method: 'GET',
+        url: `/advert?page=${queryPage}&limit=${queryLimit}`,
+      }),
+      providesTags: ['cars'],
+    }),
+
+    getAllCars: builder.query({
       query: () => ({
         method: 'GET',
         url: '/advert',
       }),
-      providesTags: ['cars'],
+      providesTags: ['carsAll'],
     }),
   }),
 });
 
-export const { useGetCarsQuery } = api;
+export const { useGetCarsQuery, useGetAllCarsQuery } = api;

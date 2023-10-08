@@ -1,5 +1,4 @@
-import { ProductCard } from "./ProductCard/ProductCard";
-import { Modal } from "./Modal/Modal";
-import { Layout } from './Layout/Layout';
+import { VehicleCard } from './VehicleCard/VehicleCard';
+import { LearnMoreModal } from './LearnMoreModal/LearnMoreModal';
 
-export {ProductCard, Modal, Layout}
+export { VehicleCard, LearnMoreModal };
