@@ -1,0 +1,24 @@
+.logoText {
+  font-family: 'Lobster', cursive;
+  font-size: 44px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0 7px;
+  color: #121417;
+  letter-spacing: 1px;
+}
+
+.logoText:active {
+  color: #121417;
+}
+
+.logoAccent {
+  font-family: 'Satisfy', cursive;
+  color: #3470ff;
+}
+
+.logoIcon {
+  height: 30px;
+  width: 30px;
+  margin: 0 7px 10px 7px;
+}

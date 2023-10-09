@@ -1,10 +1,10 @@
-import css from './CarsCard.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { cars, gui } from '../../store';
 import { disablePageScroll } from 'scroll-lock';
+import { cars, gui } from '../../store';
 import { parseAddress, addDigitSeparator } from 'utils';
 import buttonFavoriteFalse from '../../images/buttonFavoriteFalse.svg';
 import buttonFavoriteTrue from '../../images/buttonFavoriteTrue.svg';
+import css from './CarsCard.module.css';
 
 export const CarsCard = ({ car }) => {
   const dispatch = useDispatch();

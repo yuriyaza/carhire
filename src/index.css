@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #121417;
@@ -17,7 +18,7 @@ code {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   padding: 0 128px;
   margin: 0 auto;
 }
@@ -49,4 +50,17 @@ button {
 button:hover,
 button:focus {
   background: #0b44cd;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.active {
+  color: #3470FF;
+}
+
+img {
+  display: block;
 }

@@ -1,0 +1,85 @@
+.heroBar {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 25px 25px 40px;
+}
+
+.logo {
+  font-size: 60px;
+}
+
+.logoCaption {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 12px;
+  color: rgba(18, 20, 23, 0.7);
+}
+
+.buttonGetStarted {
+  border-radius: 12px;
+  border: none;
+  background: #3470ff;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 44px;
+}
+
+.buttonGetStarted:hover,
+.buttonGetStarted:focus {
+  background: #0b44cd;
+}
+
+.contacts {
+  display: flex;
+}
+
+.addressTitle {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #121417;
+}
+
+.address {
+  font-style: normal;
+  font-size: 16px;
+  margin-right: 18px;
+  color: rgba(18, 20, 23, 0.7);
+}
+
+.phone {
+  display: block;
+  margin-top: 5px;
+}
+
+.phone:hover,
+.phone:focus {
+  color: #0b44cd;
+}
+
+.socialsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialsItem:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.socialsItem:hover,
+.socialsItem:focus {
+  scale: 1.1;
+}
