@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/carhire/static/css/main.dd371f0c.css",
-    "main.js": "/carhire/static/js/main.a39ef322.js",
+    "main.css": "/carhire/static/css/main.701d9c1b.css",
+    "main.js": "/carhire/static/js/main.697bc45b.js",
+    "static/media/hero.png": "/carhire/static/media/hero.b577b87965d27da26d90.png",
     "index.html": "/carhire/index.html",
     "static/media/buttonFavoriteFalse.svg": "/carhire/static/media/buttonFavoriteFalse.282d936f414f4c6884ab9306a91dad67.svg",
     "static/media/buttonFavoriteTrue.svg": "/carhire/static/media/buttonFavoriteTrue.97847e9195943f61800c97807e735d4f.svg",
     "static/media/buttonClose.svg": "/carhire/static/media/buttonClose.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
-    "main.dd371f0c.css.map": "/carhire/static/css/main.dd371f0c.css.map",
-    "main.a39ef322.js.map": "/carhire/static/js/main.a39ef322.js.map"
+    "main.701d9c1b.css.map": "/carhire/static/css/main.701d9c1b.css.map",
+    "main.697bc45b.js.map": "/carhire/static/js/main.697bc45b.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd371f0c.css",
-    "static/js/main.a39ef322.js"
+    "static/css/main.701d9c1b.css",
+    "static/js/main.697bc45b.js"
   ]
 }
