@@ -1,6 +1,6 @@
 import heroImage from '../../images/hero.png';
 import css from './Home.module.css';
-import { Hero, Navigation } from 'components';
+import { Hero } from 'components';
 
 export const Home = () => {
   return (
