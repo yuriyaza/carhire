@@ -2,6 +2,6 @@
 
 Website project for a car rental company
 
-## Using technologies
+## Technologies used:
 
 React, Redux, RTK Query, JavaScript, HTML/CSS
