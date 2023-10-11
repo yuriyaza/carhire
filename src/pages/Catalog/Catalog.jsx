@@ -1,9 +1,9 @@
-import { useGetAllCarsQuery } from '../../api/api';
-import { Navigation, CarsList, LearnMoreModal, SearchBar } from 'components';
-import { useDispatch, useSelector } from 'react-redux';
-import { cars } from '../../store';
-import { useGetCarsByPagesQuery } from '../../api/api';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { cars } from '../../store';
+import { useGetCarsByPagesQuery, useGetAllCarsQuery } from '../../api/api';
+import { Header, CarsList, LearnMoreModal, SearchBar } from 'components';
 import css from './Catalog.module.css';
 
 export const Catalog = () => {
@@ -35,24 +35,26 @@ export const Catalog = () => {
 
     return (
         <>
-            <Navigation />
-            <div className='container'>
-                <SearchBar />
+            <Header />
+            <section className='section'>
+                <div className='container'>
+                    <SearchBar />
 
-                <CarsList cars={isFilterOn ? filteredCarsFromStore : paginatedCarsFromDB} />
-                {isLoadMoreButtonEnabled && (
-                    <div className={css.buttonWrapper}>
-                        <button
-                            className={css.buttonLoadMore}
-                            onClick={() => {
-                                dispatch(cars.actions.setQueryPage(queryPage + 1));
-                            }}>
-                            Load more
-                        </button>
-                    </div>
-                )}
-                {isModalOpen && <LearnMoreModal />}
-            </div>
+                    <CarsList cars={isFilterOn ? filteredCarsFromStore : paginatedCarsFromDB} />
+                    {isLoadMoreButtonEnabled && (
+                        <div className={css.buttonWrapper}>
+                            <button
+                                className={css.buttonLoadMore}
+                                onClick={() => {
+                                    dispatch(cars.actions.setQueryPage(queryPage + 1));
+                                }}>
+                                Load more
+                            </button>
+                        </div>
+                    )}
+                    {isModalOpen && <LearnMoreModal />}
+                </div>
+            </section>
         </>
     );
 };

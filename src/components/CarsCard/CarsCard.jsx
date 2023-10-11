@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { disablePageScroll } from 'scroll-lock';
 import { cars, gui } from '../../store';
 import { parseAddress, addDigitSeparator } from 'utils';
+
 import buttonFavoriteFalse from '../../images/buttonFavoriteFalse.svg';
 import buttonFavoriteTrue from '../../images/buttonFavoriteTrue.svg';
 import css from './CarsCard.module.css';

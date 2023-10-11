@@ -1,54 +1,34 @@
-import { NavLink } from 'react-router-dom';
+import { IoCarSportOutline } from 'react-icons/io5';
+import { HiOutlineReceiptPercent } from 'react-icons/hi2';
+import { TbUserCheck } from 'react-icons/tb';
 import css from './Hero.module.css';
-
-import iconInstagram from '../../images/iconInstagram.png';
-import iconFacebook from '../../images/iconFacebook.png';
-import iconYoutube from '../../images/iconYoutube.png';
-
-import { Logo } from 'components';
 
 export const Hero = () => {
     return (
-        <>
-            <div className={css.heroBar}>
-                <div className={css.logoWrapper}>
-                    <Logo />
-                    <h1 className={css.logoCaption}>Your Rental Car</h1>
-                </div>
-
-                <NavLink className={css.buttonGetStarted} to='/catalog'>
-                    Get Started
-                </NavLink>
-
-                <div className={css.contacts}>
-                    <address className={css.address}>
-                        <p className={css.addressTitle}>Our Contacts:</p>
-                        <p>26-A, Dehtarivska str.</p>
-                        <p>Kyiv, Ukraine</p>
-                        <a className={css.phone} href='tel:+380730000000'>
-                            +380 73 000 00 00
-                        </a>
-                    </address>
-
-                    <ul className={css.socialsList}>
-                        <li className={css.socialsItem}>
-                            <a href='https://www.instagram.com/' target='_blank' rel='noreferrer' aria-label='Instagram page'>
-                                <img src={iconInstagram} width='25' height='auto' alt='Instagram logo' />
-                            </a>
-                        </li>
-                        <li className={css.socialsItem}>
-                            <a href='https://www.facebook.com/' target='_blank' rel='noreferrer' aria-label='Facebook page'>
-                                <img src={iconFacebook} width='23' height='auto' alt='Facebook logo' />
-                            </a>
-                        </li>
-                        <li className={css.socialsItem}>
-                            <a href='https://www.youtube.com/' target='_blank' rel='noreferrer' aria-label='YouTube chanel'>
-                                <img src={iconYoutube} width='25' height='auto' alt='YouTube logo' />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </>
+        <ul className={css.advantagesList}>
+            <li className={css.advantagesItem}>
+                <IoCarSportOutline className={css.advantagesIcon} />
+                <h2 className={css.advantagesTitle}>Actual Proposals</h2>
+                <p className={css.advantagesDescription}>Explore our current proposals and start reservations to find the right car for you</p>
+            </li>
+            <li className={css.advantagesItem}>
+                <HiOutlineReceiptPercent className={css.advantagesIcon} />
+                <h2 className={css.advantagesTitle}>Bonus Program</h2>
+                <p className={css.advantagesDescription}>You can accumulate bonuses and use them on your next car reservations</p>
+            </li>
+            <li className={css.advantagesItem}>
+                <TbUserCheck className={css.advantagesIcon} />
+                <h2 className={css.advantagesTitle}>Business Rentals</h2>
+                <p className={css.advantagesDescription}>Our special offers for business clients will allow you to save time and money</p>
+            </li>
+        </ul>
     );
 };
+
+//
+//
+
+// Benefit programYou can accumulate bonuses and use them on your next car reservations
+
+// Business Rentals
+// Our special offers for business clients will allow you to save time and money

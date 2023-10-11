@@ -1,14 +1,11 @@
-import css from './Logo.module.css';
-import { Link } from 'react-router-dom';
 import { GiCarKey } from 'react-icons/gi';
+import css from './Logo.module.css';
 
 export const Logo = () => {
     return (
-        <>
-            <Link className={css.logoText} to='/'>
-                Car<span className={css.logoAccent}>Hire</span>
-                <GiCarKey className={css.logoIcon} />
-            </Link>
-        </>
+        <div className={css.logoText}>
+            Car<span className={css.logoAccent}>Hire</span>
+            <GiCarKey className={css.logoIcon} />
+        </div>
     );
 };

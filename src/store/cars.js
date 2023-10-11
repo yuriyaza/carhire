@@ -6,7 +6,7 @@ export const cars = createSlice({
     name: 'cars',
 
     initialState: {
-        queryLimit: 3,
+        queryLimit: 8,
         queryPage: 1,
 
         allCars: [],

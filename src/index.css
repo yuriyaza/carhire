@@ -5,21 +5,29 @@
 }
 
 body {
+    cursor: default;
     margin: 0;
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #121417;
+    overflow-y: scroll;
 }
 
 code {
     font-family: 'Manrope', sans-serif;
 }
 
+.section {
+    margin-top: 140px;
+    margin-bottom: 50px;
+}
+
 .container {
     max-width: 1440px;
-    padding: 0 128px;
+    min-width: 980px;
+    padding: 0 50px;
     margin: 0 auto;
 }
 

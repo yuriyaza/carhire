@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { clearQueueScrollLocks, enablePageScroll } from 'scroll-lock';
-
 import { gui } from '../../store';
 import { parseAddress, parseConditions, addDigitSeparator } from 'utils';
 
-import css from './LearnMoreModal.module.css';
 import btnClose from '../../images/buttonClose.svg';
+import css from './LearnMoreModal.module.css';
 
 export const LearnMoreModal = () => {
     const dispatch = useDispatch();

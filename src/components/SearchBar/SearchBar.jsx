@@ -1,8 +1,9 @@
-import { Select, InputNumber, Input } from 'antd';
-import { createFilterList } from '../../utils';
-import { useDispatch, useSelector } from 'react-redux';
-import { cars, gui } from '../../store';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Select, Input } from 'antd';
+
+import { cars, gui } from '../../store';
+import { createFilterList } from '../../utils';
 import css from './SearchBar.module.css';
 
 export const SearchBar = () => {
