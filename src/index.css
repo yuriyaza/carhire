@@ -1,66 +1,66 @@
 @import-normalize;
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Manrope', sans-serif;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #121417;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #121417;
 }
 
 code {
-  font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .container {
-  max-width: 1440px;
-  padding: 0 128px;
-  margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 128px;
+    margin: 0 auto;
 }
 
 p,
 h1,
 h2,
 h3 {
-  margin: 0;
+    margin: 0;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 button {
-  border-radius: 12px;
-  border: none;
-  background: #3470ff;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    background: #3470ff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
 }
 
 button:hover,
 button:focus {
-  background: #0b44cd;
+    background: #0b44cd;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 a.active {
-  color: #3470FF;
+    color: #3470ff;
 }
 
 img {
-  display: block;
+    display: block;
 }

@@ -1,15 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const gui = createSlice({
-  name: 'gui',
+    name: 'gui',
 
-  initialState: {
-    isModalOpen: false,
-  },
-
-  reducers: {
-    setModalOpen(state, action) {
-      state.isModalOpen = action.payload;
+    initialState: {
+        isFilterOn: false,
+        isModalOpen: false,
     },
-  },
+
+    reducers: {
+        setFilterOn(state, action) {
+            state.isFilterOn = action.payload;
+        },
+
+        setModalOpen(state, action) {
+            state.isModalOpen = action.payload;
+        },
+    },
 });
