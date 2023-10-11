@@ -37,6 +37,7 @@ ul {
 }
 
 button {
+    font-family: inherit;
     border-radius: 12px;
     border: none;
     background: #3470ff;
@@ -63,4 +64,92 @@ a.active {
 
 img {
     display: block;
+}
+
+.ant-select-selection-item {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #121417;
+}
+
+.ant-select-selection-placeholder {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.ant-select-item-option-content {
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(18, 20, 23, 0.5);
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: none;
+    background: #f7f7fb;
+}
+
+.searchFieldBrand .ant-select-selector,
+.searchFieldPrice .ant-select-selector {
+    border-radius: 14px;
+}
+
+.searchFieldBrand {
+    width: 224px;
+    height: 48px;
+    margin-right: 18px;
+}
+
+.searchFieldPrice {
+    width: 125px;
+    height: 48px;
+    margin-right: 18px;
+}
+
+.searchFieldMileageFrom,
+.searchFieldMileageTo {
+    width: 160px;
+    height: 48px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #121417;
+    background: #f7f7fb;
+    border: none;
+}
+
+.searchFieldMileageFrom:hover,
+.searchFieldMileageFrom:focus,
+.searchFieldMileageTo:hover,
+.searchFieldMileageTo:focus {
+    background: #f7f7fb;
+}
+
+.searchFieldMileageFrom {
+    border-radius: 14px 0 0 14px;
+    border-right: 1px solid #d3d3d3;
+}
+
+.searchFieldMileageTo {
+    border-radius: 0 14px 14px 0;
+}
+
+.searchFieldMileageFrom:hover,
+.searchFieldMileageFrom:focus {
+    border-right: 1px solid #d3d3d3;
+}
+
+.searchFieldMileageFrom::placeholder,
+.searchFieldMileageTo::placeholder {
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(18, 20, 23, 0.5);
 }

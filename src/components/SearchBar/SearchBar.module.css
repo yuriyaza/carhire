@@ -1,0 +1,24 @@
+.searchBar {
+    display: flex;
+    align-items: flex-end;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    color: #8a8a89;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.fieldWrapper {
+    display: flex;
+    margin-right: 18px;
+}
+
+.buttonSearch {
+    width: 136px;
+    height: 48px;
+    flex-shrink: 0;
+}

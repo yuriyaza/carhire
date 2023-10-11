@@ -15,8 +15,8 @@ export const cars = createSlice({
         filteredCarsFromStore: [],
         selectedCar: {},
 
-        brandFilter: '',
-        priceFilter: '',
+        brandFilter: null,
+        priceFilter: null,
         mileageFromFilter: 0,
         mileageToFilter: 0,
     },
