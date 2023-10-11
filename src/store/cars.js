@@ -8,14 +8,15 @@ export const cars = createSlice({
     initialState: {
         queryLimit: 3,
         queryPage: 1,
+
+        allCars: [],
         favoriteCars: [],
         paginatedCarsFromDB: [],
         filteredCarsFromStore: [],
+        selectedCar: {},
 
-        selectedCar: null,
-
-        brandFilter: null,
-        priceFilter: null,
+        brandFilter: '',
+        priceFilter: '',
         mileageFromFilter: 0,
         mileageToFilter: 0,
     },
@@ -35,6 +36,10 @@ export const cars = createSlice({
 
         addToFavorite(state, action) {
             state.favoriteCars.push(action.payload);
+        },
+
+        setAllCars(state, action) {
+            state.allCars = action.payload;
         },
 
         removeFromFavorite(state, action) {

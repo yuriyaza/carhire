@@ -9,7 +9,7 @@ export const gui = createSlice({
     },
 
     reducers: {
-        setFilterOn(state, action) {
+        setFilterStatus(state, action) {
             state.isFilterOn = action.payload;
         },
 

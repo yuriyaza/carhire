@@ -4,5 +4,7 @@ import { Navigation } from './Navigation/Navigation';
 import { CarsList } from './CarsList/CarsList';
 import { CarsCard } from './CarsCard/CarsCard';
 import { LearnMoreModal } from './LearnMoreModal/LearnMoreModal';
+import { SearchBar } from './SearchBar/SearchBar';
 
-export { Hero, Logo, Navigation, CarsList, CarsCard, LearnMoreModal };
+
+export { Hero, Logo, Navigation, CarsList, CarsCard, LearnMoreModal, SearchBar };
