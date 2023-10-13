@@ -10,7 +10,9 @@ export const Home = () => {
                 <div className='container'>
                     <Hero />
                 </div>
-                <img className={css.heroImage} src={heroImage} alt='CarHere - Your Rental Car' />
+                <div className={css.imageWrapper}>
+                    <img className={css.heroImage} src={heroImage} alt='CarHere - Your Rental Car' />
+                </div>
             </section>
         </>
     );

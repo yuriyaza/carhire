@@ -4,9 +4,9 @@ import { gui } from '../../store';
 import { parseAddress, parseConditions, addDigitSeparator } from 'utils';
 
 import btnClose from '../../images/buttonClose.svg';
-import css from './LearnMoreModal.module.css';
+import css from './DetailModal.module.css';
 
-export const LearnMoreModal = () => {
+export const DetailModal = () => {
     const dispatch = useDispatch();
     const car = useSelector(state => state.cars.selectedCar);
 
@@ -40,9 +40,9 @@ export const LearnMoreModal = () => {
 
                 <img className={css.carImage} src={car.img} alt={car.make} />
 
-                <p className={css.carMake}>
+                <h2 className={css.carMake}>
                     {car.make} <span className={css.carModel}>{car.model}</span>, {car.year}
-                </p>
+                </h2>
 
                 <ul className={css.carDetailsList}>
                     <li className={css.carDetailFirstLine}>
@@ -55,13 +55,13 @@ export const LearnMoreModal = () => {
 
                 <p className={css.carDescription}>{car.description}</p>
 
-                <h2 className={css.carAccessoriesTitle}>Accessories and functionalities:</h2>
+                <h3 className={css.carAccessoriesTitle}>Accessories and functionalities:</h3>
                 <ul className={css.carAccessoriesList}>
                     <li className={css.carAccessoriesFirstLine}>{car.accessories.join(' | ')}</li>
                     <li className={css.carAccessoriesSecondLine}>{car.functionalities.join(' | ')}</li>
                 </ul>
 
-                <h2 className={css.rentalConditionsTitle}>Rental Conditions:</h2>
+                <h3 className={css.rentalConditionsTitle}>Rental Conditions:</h3>
                 <ul className={css.rentalConditionsList}>
                     <li className={css.rentalConditions}>{parseConditions(car.rentalConditions).minimumAge}</li>
                     <li className={css.rentalConditions}>{parseConditions(car.rentalConditions).driversLicense}</li>

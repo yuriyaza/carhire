@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Header, CarsList, LearnMoreModal } from 'components';
+import { Header, ProductList, DetailModal } from 'components';
 
 export const Favorites = () => {
     const favoriteCars = useSelector(state => state.cars.favoriteCars);
@@ -10,8 +10,8 @@ export const Favorites = () => {
             <Header />
             <section className='section'>
                 <div className='container'>
-                    <CarsList cars={favoriteCars} />
-                    {isModalOpen && <LearnMoreModal />}
+                    <ProductList cars={favoriteCars} />
+                    {isModalOpen && <DetailModal />}
                 </div>
             </section>
         </>

@@ -3,9 +3,13 @@ import css from './Logo.module.css';
 
 export const Logo = () => {
     return (
-        <div className={css.logoText}>
-            Car<span className={css.logoAccent}>Hire</span>
-            <GiCarKey className={css.logoIcon} />
-        </div>
+        <>
+            <div className={css.logo}>
+                <span className={css.logoPartCar}>Car</span>
+                <span className={css.logoPartHire}>Hire</span>
+                <GiCarKey className={css.logoIcon} />
+            </div>
+            <p className={css.slogan}>Your Rental Car</p>
+        </>
     );
 };

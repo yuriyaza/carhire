@@ -1,18 +1,17 @@
-.logoText {
-    font-family: 'Lobster', cursive;
+.logo {
     font-size: 42px;
     font-weight: 600;
     text-decoration: none;
     padding: 0 7px;
-    color: #121417;
     letter-spacing: 1px;
 }
 
-.logoText:active {
+.logoPartCar {
+    font-family: 'Lobster', cursive;
     color: #121417;
 }
 
-.logoAccent {
+.logoPartHire {
     font-family: 'Satisfy', cursive;
     color: #3470ff;
 }
@@ -21,4 +20,11 @@
     height: 30px;
     width: 30px;
     margin: 0 7px 10px 7px;
+}
+
+.slogan {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    color: rgba(18, 20, 23, 0.7);
 }

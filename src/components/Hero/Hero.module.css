@@ -15,7 +15,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: rgb(158, 158, 158) 0px 5px 10px 0px;
+    box-shadow: rgb(158, 158, 158) 0px 0px 20px 0px;
+    border-radius: 14px;
 }
 
 .advantagesIcon {
@@ -34,7 +35,7 @@
 
 .advantagesDescription {
     color: rgba(18, 20, 23, 0.5);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 20px;
 }

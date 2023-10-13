@@ -11,7 +11,6 @@ export const cars = createSlice({
 
         allCars: [],
         favoriteCars: [],
-        paginatedCarsFromDB: [],
         filteredCarsFromStore: [],
         selectedCar: {},
 
@@ -44,10 +43,6 @@ export const cars = createSlice({
 
         removeFromFavorite(state, action) {
             state.favoriteCars = state.favoriteCars.filter(car => car.id !== action.payload.id);
-        },
-
-        addToPaginatedCarsFromDB(state, action) {
-            state.paginatedCarsFromDB.push(...action.payload);
         },
 
         setFilteredCarsFromStore(state, action) {

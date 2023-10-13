@@ -5,9 +5,9 @@ import { parseAddress, addDigitSeparator } from 'utils';
 
 import buttonFavoriteFalse from '../../images/buttonFavoriteFalse.svg';
 import buttonFavoriteTrue from '../../images/buttonFavoriteTrue.svg';
-import css from './CarsCard.module.css';
+import css from './ProductCard.module.css';
 
-export const CarsCard = ({ car }) => {
+export const ProductCard = ({ car }) => {
     const dispatch = useDispatch();
 
     const favoriteCars = useSelector(state => state.cars.favoriteCars);
@@ -36,9 +36,9 @@ export const CarsCard = ({ car }) => {
             <img className={css.carImage} src={car.img} alt={car.make} />
 
             <div className={css.carCaption}>
-                <p className={css.carMake}>
+                <h2 className={css.carMake}>
                     {car.make} <span className={css.carModel}>{car.model}</span>, {car.year}
-                </p>
+                </h2>
                 <p className={css.carPrice}>{car.rentalPrice}</p>
             </div>
 

@@ -1,7 +1,7 @@
-import { CarsCard } from 'components';
-import css from './CarsList.module.css';
+import { ProductCard } from 'components';
+import css from './ProductList.module.css';
 
-export const CarsList = ({ cars }) => {
+export const ProductList = ({ cars }) => {
     return (
         <>
             <ul className={css.carsList}>
@@ -9,7 +9,7 @@ export const CarsList = ({ cars }) => {
                     cars.map(car => {
                         return (
                             <li className={css.carsCard} key={car.id}>
-                                <CarsCard car={car} />
+                                <ProductCard car={car} />
                             </li>
                         );
                     })}
