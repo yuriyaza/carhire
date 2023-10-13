@@ -1,17 +1,17 @@
-.heroImage {
-    width: 100vw;
-    height: 100vh;
-    object-fit: contain;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 330px;
+.hero {
+    padding-top: 40px;
 }
+
+.heroImage {
+    width: 100%;
+    min-width: 980px;
+    height: calc(100vh - 430px);
+    max-height: calc(100% - 100px - 140px - 50px);
+    object-fit: contain;
+ }
 
 .imageWrapper {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
 }

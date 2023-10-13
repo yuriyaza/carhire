@@ -1,7 +1,12 @@
 .header {
+    border-left: 1px solid #9e9e9e;
+    border-right: 1px solid #9e9e9e;
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: #9e9e9e 0px 4px 10px 4px;
+
     width: 100%;
     min-width: 980px;
-    height: 90px;
+    height: 100px;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,7 +14,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px 0 20px;
-    box-shadow: rgb(158, 158, 158) 0px 4px 10px 4px;
     border-radius: 0 0 14px 14px;
     z-index: 10;
     background: #ffffff;

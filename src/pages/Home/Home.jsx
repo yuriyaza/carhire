@@ -8,11 +8,13 @@ export const Home = () => {
             <Header />
             <section className='section'>
                 <div className='container'>
-                    <Hero />
+                    <div className={css.hero}>
+                        <Hero />
+                    </div>
+                    {/* <div className={css.imageWrapper}> */}
                 </div>
-                <div className={css.imageWrapper}>
-                    <img className={css.heroImage} src={heroImage} alt='CarHere - Your Rental Car' />
-                </div>
+                <img className={css.heroImage} src={heroImage} alt='CarHere - Your Rental Car' />
+                {/* </div> */}
             </section>
         </>
     );
