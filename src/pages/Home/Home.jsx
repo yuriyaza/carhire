@@ -6,16 +6,14 @@ export const Home = () => {
     return (
         <>
             <Header />
-            <section className='section'>
-                <div className='container'>
-                    <div className={css.hero}>
-                        <Hero />
-                    </div>
-                    {/* <div className={css.imageWrapper}> */}
+            <div className='container'>
+                <div className={css.heroDescription}>
+                    <Hero />
                 </div>
+            </div>
+            <div className={css.heroImageWrapper}>
                 <img className={css.heroImage} src={heroImage} alt='CarHere - Your Rental Car' />
-                {/* </div> */}
-            </section>
+            </div>
         </>
     );
 };
